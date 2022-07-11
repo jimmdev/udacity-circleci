@@ -10,8 +10,6 @@ jobs:
     # See: https://circleci.com/docs/2.0/configuration-reference/#docker-machine-macos-windows-executor
     docker:
       - image: cimg/base:stable
-    environment:
-      ENV_MY_NAME: Gordon
     # Add steps to the job
     # See: https://circleci.com/docs/2.0/configuration-reference/#steps
     steps:
@@ -22,6 +20,8 @@ jobs:
   say-name:
     docker:
       - image: cimg/base:stable
+    environment:
+      ENV_MY_NAME: Gordon
     steps:
       - checkout
       - run:
